@@ -1,95 +1,248 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reliable help services in Dubai for car washing, moving, dog walking, and more. Task Hero Dubai is your go-to assistant for everyday tasks.">
+  <meta name="keywords" content="Dubai services, car washing, dog walking, elderly help, moving support, garage cleaning">
+  <meta name="author" content="Task Hero Dubai">
   <title>Task Hero Dubai | Reliable Help, Right When You Need It</title>
-  <meta name="description" content="Task Hero Dubai provides reliable everyday help services in Dubai including car washing, moving support, elderly assistance, dog walking, garage cleaning, and more." />
   <style>
     body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background: #f9f9f9;
+      font-family: 'Lato', sans-serif;
+      color: #333;
+      background-color: #f8f8f8;
     }
+
     header {
-      background: #0a3d62;
-      color: #fff;
-      padding: 40px 20px;
+      background-color: #0A3D62; /* Dubai flag-inspired color */
+      color: white;
+      padding: 20px 0;
       text-align: center;
     }
-    header h1 { margin-bottom: 10px; }
-    header p { max-width: 700px; margin: auto; }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #f1c40f;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #0A3D62;
     }
-    section {
-      padding: 50px 20px;
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #F1C40F; /* Hover effect in gold */
+    }
+
+    .btn {
+      background-color: #F1C40F;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
       max-width: 1100px;
       margin: auto;
     }
-    h2 { text-align: center; margin-bottom: 30px; }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+
     .card {
+      background: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-10px); /* Hover effect */
+    }
+
+    .card img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin: 15px 0;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #F1C40F;
+      text-decoration: none;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+      max-width: 500px;
+      margin: 20px auto;
       background: #fff;
       padding: 20px;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    footer {
-      background: #111;
-      color: #ccc;
-      text-align: center;
-      padding: 30px 20px;
+
+    form input, form textarea {
+      padding: 10px;
+      font-size: 14px;
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid #ccc;
     }
-    footer a { color: #f1c40f; text-decoration: none; }
+
+    form button {
+      background-color: #F1C40F;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      color: white;
+    }
+
+    form button:hover {
+      background-color: #D4AC0D; /* Darker gold */
+    }
+
+    #testimonials {
+      background-color: #f9f9f9;
+      padding: 50px 20px;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 10px 0;
+      font-style: italic;
+    }
+
+    /* Ensure mobile optimization */
+    @media screen and (max-width: 768px) {
+      .services {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
   </style>
 </head>
-<body><header>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
   <h1>Task Hero Dubai</h1>
   <p><strong>Reliable Help, Right When You Need It</strong></p>
-  <p>Everyday assistance services for homes, families, and individuals across Emirates Hills and surrounding areas.</p>
-  <a class="btn" href="https://wa.me/971523944074">WhatsApp Us Now</a>
-</header><section>
-  <h2>What We Do</h2>
-  <div class="services">
-    <div class="card"><h3>Car Washing</h3><p>Professional exterior and interior car washing at your location.</p></div>
-    <div class="card"><h3>Dog Walking</h3><p>Reliable and caring dog walking services to keep your pets active and happy.</p></div>
-    <div class="card"><h3>Elderly Assistance</h3><p>Respectful support for elderly individuals with daily tasks and companionship.</p></div>
-    <div class="card"><h3>Garage & Home Cleaning</h3><p>Deep cleaning and organization for garages and small spaces.</p></div>
-    <div class="card"><h3>Moving Support</h3><p>Helping hands for packing, lifting, and organizing during moves.</p></div>
-    <div class="card"><h3>Personal Errands</h3><p>General assistance, errands, and small tasks handled with care.</p></div>
-  </div>
-</section><section>
-  <h2>Why Choose Task Hero Dubai</h2>
-  <div class="services">
-    <div class="card"><p>✔ Local, trusted, and hardworking</p></div>
-    <div class="card"><p>✔ Flexible timing & fast response</p></div>
-    <div class="card"><p>✔ Honest pricing with no hidden costs</p></div>
-    <div class="card"><p>✔ Respectful, professional service</p></div>
-  </div>
-</section><section>
+  <a href="https://wa.me/971523944074" class="btn">Get a Quote Now</a>
+</header>
+
+<section id="about">
   <h2>About Us</h2>
-  <p>Task Hero Dubai was created to provide dependable everyday help for busy individuals and families in Dubai. We believe in honest work, respect, and reliability. Our promise is simple: <strong>"Your satisfaction is my pleasure."</strong></p>
-</section><section>
+  <p>Task Hero Dubai provides trusted everyday services for homes, families, and individuals in Dubai. We are dedicated to offering fast, professional help for your everyday needs.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <img src="car-wash-icon.png" alt="Car Wash Icon">
+      <h3>Car Washing</h3>
+      <p>We clean your car at your convenience, inside and out.</p>
+    </div>
+    <div class="card">
+      <img src="dog-walk-icon.png" alt="Dog Walking Icon">
+      <h3>Dog Walking</h3>
+      <p>Professional care and fun walks for your furry friend.</p>
+    </div>
+    <div class="card">
+      <img src="elderly-help-icon.png" alt="Elderly Help Icon">
+      <h3>Elderly Assistance</h3>
+      <p>Compassionate support for elderly individuals.</p>
+    </div>
+    <div class="card">
+      <img src="garage-cleaning-icon.png" alt="Garage Cleaning Icon">
+      <h3>Garage & Home Cleaning</h3>
+      <p>Keep your garage or home neat and organized.</p>
+    </div>
+    <div class="card">
+      <img src="moving-icon.png" alt="Moving Help Icon">
+      <h3>Moving Support</h3>
+      <p>Helping hands for a smooth and easy move.</p>
+    </div>
+    <div class="card">
+      <img src="errands-icon.png" alt="Errands Icon">
+      <h3>Personal Help & Errands</h3>
+      <p>Running errands and handling small tasks efficiently.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
   <h2>Contact Us</h2>
-  <p style="text-align:center;">
-    📞 Phone / WhatsApp: <strong>+971 52 394 4074</strong><br />
-    📍 Service Area: Emirates Hills, Dubai<br />
-    📧 Email: alitoto3432567@gmail.com
-  </p>
-</section><footer>
+  <form action="mailto:alitoto3432567@gmail.com" method="POST" enctype="text/plain">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<section id="testimonials">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonial">
+    <p>"Task Hero Dubai made my life so much easier. They are fast and reliable!" – Sarah, Dubai</p>
+  </div>
+  <div class="testimonial">
+    <p>"Professional and friendly. My garage has never looked better!" – Ali, Emirates Hills</p>
+  </div>
+</section>
+
+<footer>
+  <p>📞 Call us at: +971 52 394 4074</p>
+  <p>Email: <a href="mailto:alitoto3432567@gmail.com">alitoto3432567@gmail.com</a></p>
   <p>© 2026 Task Hero Dubai. All rights reserved.</p>
-</footer></body>
+</footer>
+
+</body>
 </html>
