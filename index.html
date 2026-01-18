@@ -1,249 +1,271 @@
-<!DOCTYPE html>
+task-hero-dubai/
+│
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+└── assets/
+    └── (optional local images later)<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Reliable help services in Dubai for car washing, moving, dog walking, and more. Task Hero Dubai is your go-to assistant for everyday tasks.">
-  <meta name="keywords" content="Dubai services, car washing, dog walking, elderly help, moving support, garage cleaning">
-  <meta name="author" content="Task Hero Dubai">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Task Hero Dubai | Reliable Help, Right When You Need It</title>
-  <style>
-    body {
-      font-family: 'Lato', sans-serif;
-      color: #333;
-      background-color: #f8f8f8;
-    }
-
-    header {
-    <header style="background-image: url('https://example.com/dubai-skyline.jpg'); background-size: cover; text-align: center; padding: 50px;">
-  <h1 style="font-size: 40px; color: white;">Task Hero Dubai</h1>
-  <p style="font-size: 20px; color: white;">Reliable Help, Right When You Need It</p>
-  <a href="https://wa.me/971523944074" class="btn">Get a Quote Now</a>
-</header>;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      background-color: #0A3D62;
-    }
-
-    nav ul li {
-      margin: 0 20px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 500;
-    }
-
-    nav ul li a:hover {
-      color: #F1C40F; /* Hover effect in gold */
-    }
-
-    .btn {
-      background-color: #F1C40F;
-      color: black;
-      padding: 10px 20px;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      text-align: center;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .card:hover {
-      transform: translateY(-10px); /* Hover effect */
-    }
-
-    .card img {
-      width: 50px;
-      height: 50px;
-    }
-
-    .card h3 {
-      font-size: 24px;
-      margin: 15px 0;
-    }
-
-    .card p {
-      font-size: 16px;
-      color: #666;
-    }
-
-    footer {
-      background-color: #111;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    footer a {
-      color: #F1C40F;
-      text-decoration: none;
-    }
-
-    form {
-      display: grid;
-      gap: 15px;
-      max-width: 500px;
-      margin: 20px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    form input, form textarea {
-      padding: 10px;
-      font-size: 14px;
-      width: 100%;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      background-color: #F1C40F;
-      padding: 12px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      color: white;
-    }
-
-    form button:hover {
-      background-color: #D4AC0D; /* Darker gold */
-    }
-
-    #testimonials {
-      background-color: #f9f9f9;
-      padding: 50px 20px;
-    }
-
-    .testimonial {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin: 10px 0;
-      font-style: italic;
-    }
-
-    /* Ensure mobile optimization */
-    @media screen and (max-width: 768px) {
-      .services {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <h1>Task Hero Dubai</h1>
-  <p><strong>Reliable Help, Right When You Need It</strong></p>
-  <a href="https://wa.me/971523944074" class="btn">Get a Quote Now</a>
+  <div class="logo">TASK HERO <span>DUBAI</span></div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
 </header>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>Task Hero Dubai provides trusted everyday services for homes, families, and individuals in Dubai. We are dedicated to offering fast, professional help for your everyday needs.</p>
+<!-- MOBILE MENU -->
+<nav id="mobileMenu">
+  <a href="#about">About Us</a>
+  <a href="#auto">Auto Tasks</a>
+  <a href="#home">Home Tasks</a>
+  <a href="#gift">Gift & Event Tasks</a>
+  <a href="#personal">Personal Tasks</a>
+  <a href="#delivery">Private Deliveries</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#contact">Contact Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>Reliable Help,<br>Right When You Need It</h1>
+    <p>One platform. Many solutions. Serving all of Dubai.</p>
+    <a class="btn" href="#contact">Book a Task</a>
+  </div>
 </section>
 
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">
-      <img src="car-wash-icon.png" alt="Car Wash Icon">
-      <h3>Car Washing</h3>
-      <p>We clean your car at your convenience, inside and out.</p>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About Task Hero Dubai</h2>
+  <p>
+    Task Hero Dubai is a multi-service task platform designed to simplify life in the city.
+    From auto care and home help to luxury gift handling and private deliveries,
+    we provide fast, professional, and reliable solutions — all from one trusted source.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+
+  <div id="auto" class="service-card">
+    <img src="https://images.unsplash.com/photo-1605559424843-9e4c9b21b0d6" alt="Car Wash Dubai">
+    <h3>Auto Tasks</h3>
+    <ul>
+      <li>Mobile Car Wash</li>
+      <li>Interior Cleaning</li>
+      <li>Basic Detailing</li>
+    </ul>
+  </div>
+
+  <div id="home" class="service-card">
+    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="Home Services">
+    <h3>Home Tasks</h3>
+    <ul>
+      <li>Garage Cleaning</li>
+      <li>Moving Assistance</li>
+      <li>Errands & Support</li>
+    </ul>
+  </div>
+
+  <div id="gift" class="service-card">
+    <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df" alt="Flower Packaging">
+    <h3>Gift & Event Tasks</h3>
+    <ul>
+      <li>Flower Pickup & Luxury Packaging</li>
+      <li>Gift Wrapping</li>
+      <li>Surprise Delivery</li>
+    </ul>
+  </div>
+
+  <div id="personal" class="service-card">
+    <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c" alt="Personal Assistance">
+    <h3>Personal Tasks</h3>
+    <ul>
+      <li>Dog Walking</li>
+      <li>Elderly Assistance</li>
+      <li>Personal Errands</li>
+    </ul>
+  </div>
+
+  <div id="delivery" class="service-card">
+    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f" alt="Delivery Dubai">
+    <h3>Private Deliveries</h3>
+    <ul>
+      <li>Same-Day Delivery</li>
+      <li>Documents & Gifts</li>
+      <li>Secure Handling</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="section dark">
+  <h2>Transparent Pricing</h2>
+  <div class="pricing-grid">
+    <div class="price-box">
+      <h3>Auto Tasks</h3>
+      <p>Exterior Wash – AED 50</p>
+      <p>Exterior + Interior – AED 90</p>
+      <p>Detailing – from AED 230</p>
     </div>
-    <div class="card">
-      <img src="dog-walk-icon.png" alt="Dog Walking Icon">
-      <h3>Dog Walking</h3>
-      <p>Professional care and fun walks for your furry friend.</p>
+
+    <div class="price-box">
+      <h3>Gift & Events</h3>
+      <p>Flower Handling – from AED 140</p>
+      <p>Luxury Packaging – add AED 40</p>
+      <p>Same-Day Delivery – AED 80</p>
     </div>
-    <div class="card">
-      <img src="elderly-help-icon.png" alt="Elderly Help Icon">
-      <h3>Elderly Assistance</h3>
-      <p>Compassionate support for elderly individuals.</p>
-    </div>
-    <div class="card">
-      <img src="garage-cleaning-icon.png" alt="Garage Cleaning Icon">
-      <h3>Garage & Home Cleaning</h3>
-      <p>Keep your garage or home neat and organized.</p>
-    </div>
-    <div class="card">
-      <img src="moving-icon.png" alt="Moving Help Icon">
-      <h3>Moving Support</h3>
-      <p>Helping hands for a smooth and easy move.</p>
-    </div>
-    <div class="card">
-      <img src="errands-icon.png" alt="Errands Icon">
-      <h3>Personal Help & Errands</h3>
-      <p>Running errands and handling small tasks efficiently.</p>
+
+    <div class="price-box">
+      <h3>Home & Personal</h3>
+      <p>Hourly Tasks – from AED 60/hr</p>
+      <p>Moving Help – from AED 150</p>
+      <p>Errands – custom quote</p>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <form action="mailto:alitoto3432567@gmail.com" method="POST" enctype="text/plain">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-
-    <button type="submit">Send Message</button>
-  </form>
+<!-- TESTIMONIALS -->
+<section class="section">
+  <h2>What Clients Say</h2>
+  <blockquote>“Professional, fast, and reliable. Task Hero saved my day.” – Dubai Marina</blockquote>
+  <blockquote>“Luxury service without luxury pricing.” – Downtown Dubai</blockquote>
 </section>
 
-<section id="testimonials">
-  <h2>What Our Customers Say</h2>
-  <div class="testimonial">
-    <p>"Task Hero Dubai made my life so much easier. They are fast and reliable!" – Sarah, Dubai</p>
-  </div>
-  <div class="testimonial">
-    <p>"Professional and friendly. My garage has never looked better!" – Ali, Emirates Hills</p>
-  </div>
+<!-- CONTACT -->
+<section id="contact" class="section dark">
+  <h2>Contact Task Hero Dubai</h2>
+  <p>📍 Serving all areas across Dubai</p>
+  <p>📞 WhatsApp: +971 52 394 4074</p>
+  <p>✉️ Email: alitoto3432567@gmail.com</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>📞 Call us at: +971 52 394 4074</p>
-  <p>Email: <a href="mailto:alitoto3432567@gmail.com">alitoto3432567@gmail.com</a></p>
-  <p>© 2026 Task Hero Dubai. All rights reserved.</p>
+  <p>© Task Hero Dubai | Serving Dubai Since 2023</p>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
-</html>
+</html>body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #000;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo span {
+  color: gold;
+}
+
+.menu-btn {
+  font-size: 26px;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background: #111;
+  position: fixed;
+  top: 60px;
+  width: 100%;
+}
+
+nav a {
+  padding: 15px;
+  border-bottom: 1px solid #222;
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1504274066651-8d31a536b11a") center/cover;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.btn {
+  background: gold;
+  color: black;
+  padding: 12px 20px;
+  width: fit-content;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.dark {
+  background: #111;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.service-card {
+  background: #1a1a1a;
+  margin: 10px;
+  padding: 20px;
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.price-box {
+  border: 1px solid gold;
+  padding: 20px;
+  margin: 10px;
+}
+
+footer {
+  background: #000;
+  padding: 15px;
+  text-align: center;
+}
+
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
